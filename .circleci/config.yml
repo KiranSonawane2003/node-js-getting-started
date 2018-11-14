@@ -16,8 +16,18 @@ jobs:
         - node_modules
         key: v1-dependencies-{{ checksum "package.json" }}
     - run: yarn test
+
+   deploy:
+   	docker:
+   		- image: buildpack-deps:trusty
+   	steps:
+   		- checkout
+   		- run
+   			name: Deploy Master to Heroku
+   			command: git push https://heroku:$68749f66-28d4-417f-b124-bc339507125c@git.heroku.com/$thawing-castle-11145.git master
 workflows:
   version: 2
   workflow:
     jobs:
     - build
+    - deploy
