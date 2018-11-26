@@ -1,7 +1,7 @@
 node {
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
-      sh 'git clone -b Jenkins https://github.com/KiranSonawane2003/time-tracker.git'
+      git 'https://github.com/KiranSonawane2003/node-js-getting-started.git/'
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.           
