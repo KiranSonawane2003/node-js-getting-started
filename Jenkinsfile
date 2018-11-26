@@ -7,7 +7,7 @@ node {
       // **       in the global configuration.           
       sh 'npm install express'
       sh 'npm install moment'
-      sh 'npm install cjs'
+      sh 'npm install ejs'
    }
    stage('Build') {
       // Run the maven build
