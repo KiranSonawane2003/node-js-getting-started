@@ -17,7 +17,5 @@ node {
       junit '**/target/surefire-reports/TEST-*.xml'
       archive 'target/*.jar'
    }
-   stage('Deploy to S3') {
-      s3CopyArtifact buildSelector: lastSuccessful(), excludeFilter: '', filter: '', flatten: true, optional: true, projectName: 'Node-js-getting-started-pipeline', target: ''
-   }
+   
 }
